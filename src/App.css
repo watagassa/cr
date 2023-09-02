@@ -11,6 +11,17 @@
   will-change: filter;
   transition: filter 300ms;
 }
+.left-menu{/*左のメニューバーのエリア*/
+  position: fixed;
+  top:0;
+  left:0;
+  border-right:5px solid #d0d0d0;
+  box-sizing: border-box;
+  width: 20% ;
+  height: 100vh;
+  padding-top: 25px;
+  background-color: #f0f0ff;
+}
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
