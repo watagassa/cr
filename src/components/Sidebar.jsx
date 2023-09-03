@@ -1,7 +1,7 @@
 import React from "react";
 import { SidebarData } from "./SidebarData";
-
 function Sidebar() {
+  console.log(window.location.href);
   return (
     <div className="Sidebar">
       <ul className="SidebarList">
@@ -13,6 +13,7 @@ function Sidebar() {
               className="row"
               onClick={() => {
                 window.location.pathname = value.link;
+                console.log("これは現在のurlです" + window.location.href);
               }}
             >
               <div id="icon">{value.icon}</div>
@@ -24,5 +25,4 @@ function Sidebar() {
     </div>
   );
 }
-
 export default Sidebar;
