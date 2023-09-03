@@ -6,7 +6,7 @@ export const SidebarData = [
   {
     title: "ホーム",
     icon: <HomeIcon />,
-    link: "/App",
+    link: "/HomeScreen",
   },
   {
     title: "投稿",
