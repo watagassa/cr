@@ -2,15 +2,16 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Sidebar from "./components/Sidebar";
 import ImageUploader from "./ImageUploader";
-//import ImageDownloader from './ImageDownloader'
-
 function App() {
   return (
     <div className="App">
       {/* uplodaer */}
-      <ImageUploader/>
+      <ImageUploader />
+      <Sidebar />
     </div>
   );
 }
 export default App;
+
