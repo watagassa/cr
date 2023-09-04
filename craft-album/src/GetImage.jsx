@@ -13,13 +13,13 @@ function GetImage() {
                 const listResult = await listAll(directoryRef); // 'images'ディレクトリ内のファイルを一覧表示
 
                 // ファイルのダウンロードURLを取得して状態に設定
-                const urls = await Promise.all(
+                let urls = await Promise.all(
                     listResult.items.map(async (item) => {
                         const url = await getDownloadURL(item);
                         return url;
                     })
                 );
-
+                urls = [...urls].reverse()
                 setImageUrls(urls);
             } catch (error) {
                 console.error('Error listing images:', error);
