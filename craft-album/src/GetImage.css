@@ -1,10 +1,21 @@
-.GetImagecss {
-    opacity: 0;
+.GetImage-css {
     position: absolute;
     top: 0;
     left: 20%;
-    padding-left: 30%;
-    width: 70%;
+    width: 80%;
     height: 100%;
-    cursor: pointer;
-  }
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.image-list {
+    gap: 30px;
+}
+
+.image-size {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    /* width, heightと使い、画像の大きさを均一にする */
+    border: 1px solid #ffffff;
+}
