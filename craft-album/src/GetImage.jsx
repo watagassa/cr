@@ -1,6 +1,7 @@
 import { getStorage, ref, getDownloadURL, listAll } from "firebase/storage";
 import "./GetImage.css";
 import storage from "./firebase";
+import Likes from "./Likes";
 import React, { useEffect, useState } from 'react';
 function GetImage() {
     const [imageUrls, setImageUrls] = useState([]);
@@ -35,7 +36,6 @@ function GetImage() {
                 {imageUrls.map((url, index) => (
                     <>
                         <img key={index} src={url} alt={`Image ${index}`} className="image-size" />
-                        <h4>いいね機能</h4>
                     </>
                 ))}
             </div>

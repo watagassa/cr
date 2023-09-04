@@ -3,7 +3,8 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getStorage } from "firebase/storage";
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-
+import{ getAuth } from "firebase/auth";
+import{ GoogleAuthProvider } from "firebase/auth";
 const firebaseConfig = {
   apiKey: "AIzaSyCOkCig7WiezrLehuHgJrQ9hHcuJ8lE-Hc",
   authDomain: "test-3d26d.firebaseapp.com",
@@ -19,6 +20,8 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const storage = getStorage(app);
 const db = getFirestore(app);
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
 // Get a list of cities from your database
 async function getCities(db) {
   const citiesCol = collection(db, 'cities');
@@ -26,4 +29,5 @@ async function getCities(db) {
   const cityList = citySnapshot.docs.map(doc => doc.data());
   return cityList;
 }
-export default storage;
+export  default storage;
+export  {auth, provider};
