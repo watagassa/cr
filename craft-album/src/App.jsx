@@ -5,16 +5,14 @@ import ImageUploader from "./ImageUploader";
 import GetImage from "./GetImage"
 // async 
 function App() {
-  const [urlChange, Changed] = useState(false);
-  if (window.location.pathname == "/" && urlChange == false) {
+  if (window.location.pathname == "/") {
     return (
       <div className="App" >
-        {/* uplodaer */}
         <GetImage />
         <Sidebar />
       </div>
     );
-  } else if (window.location.pathname == "/PostingScreen"&& urlChange == false) {
+  } else if (window.location.pathname == "/PostingScreen") {
     return (
       <div className="Post">
         {/* uplodaer */}
