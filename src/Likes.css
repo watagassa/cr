@@ -1,5 +1,6 @@
 .Likes {
-    text-align: center;
+    text-align: right;
+    margin-right: 10px;
   }
   
   .Likes-logo {
@@ -35,8 +36,6 @@
       transform: rotate(360deg);
     }
   }
-  
-  
   .likeButton {
     background-color:rgb(242, 3, 3);
     color: white;

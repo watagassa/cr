@@ -10,7 +10,9 @@ const ImageUploader = () => {
 
   const OnFileUploadToFirebase = (e) => {
     const file = e.target.files[0];
-    const storageRef = ref(storage, "image/" + file.name);
+    const ext = file.name.split(".").pop();
+    const fileName = `${ Date.now()}.${ext}`;
+    const storageRef = ref(storage, "image/" + fileName);
     const uploadImage = uploadBytesResumable(storageRef, file);
     uploadImage.on(
       "state_changed",

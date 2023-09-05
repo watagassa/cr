@@ -16,9 +16,7 @@ function LikeButton() {
 function Likes() {
     return (
       <div className="Likes">
-        <header className="Likes-header">
           <LikeButton />
-          </header>
       </div>
     );
   }
