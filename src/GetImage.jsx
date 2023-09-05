@@ -36,6 +36,8 @@ function GetImage() {
                 {imageUrls.map((url, index) => (
                     <>
                         <img key={index} src={url} alt={`Image ${index}`} className="image-size" />
+                        <Likes/>
+                        <br></br>
                     </>
                 ))}
             </div>
